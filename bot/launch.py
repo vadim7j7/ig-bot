@@ -1,7 +1,7 @@
 from tornado.ioloop import IOLoop
 from tornado.queues import Queue
 
-from bot.bot import start
+from bot.bot import Bot
 
 
 queue = Queue()
@@ -29,6 +29,7 @@ class Launch(object):
             user = await queue.get()
 
             try:
-                await start(user)
+                bot = Bot(user=user)
+                await bot.start()
             finally:
                 queue.task_done()

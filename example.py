@@ -8,6 +8,10 @@ def generate_users() -> list:
     user.credentials.email = 'LOGIN'
     user.credentials.password = 'PASSWORD'
 
+    user.action_get_media.params.update({
+        'tags': ['develop', 'python', 'django', 'ruby on rails', 'ruby', 'reactJs', ]
+    })
+
     return [user, ]
 
 
