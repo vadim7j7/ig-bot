@@ -7,7 +7,7 @@ from bot.bot import Bot
 queue = Queue()
 
 
-class Launch(object):
+class Launcher(object):
     def __init__(self, users: list = ()):
         self.users = users
 

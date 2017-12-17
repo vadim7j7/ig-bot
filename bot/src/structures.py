@@ -7,7 +7,7 @@ class Action(object):
     name: str = None
     allow: bool = True
     params: dict = {}
-    config: dict = {'pause': {'from': 1000, 'to': 3000}}
+    config: dict = {'delay': {'from': 1000, 'to': 3000}}
     data: object = None
 
     def __init__(self, name: str):

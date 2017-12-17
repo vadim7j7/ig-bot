@@ -1,4 +1,4 @@
-from bot.launch import Launch
+from bot.launcher import Launcher
 from bot.src.structures import User
 
 
@@ -17,6 +17,6 @@ def generate_users() -> list:
 
 if __name__ == '__main__':
     users = generate_users()
-    launch = Launch(users=users)
+    launch = Launcher(users=users)
 
     launch.run()
